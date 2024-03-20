@@ -14,15 +14,23 @@ public class VehicleRepository implements IVehicleRepository{
     private final Map<Integer, Vehicle> vehicleMap = new HashMap<>();
     private String repositoryPath;
     @Override
-    public void rentVehicle(int vehicleID) {
+    public boolean rentVehicle(int vehicleID) {
+        if(getVehicle(vehicleID).isRented())
+            return false;
+        vehicleMap.get(vehicleID).setRented(true);
+        save(repositoryPath);
+        return true;
+    }
+
+    @Override
+    public void returnVehicle(int vehicleID) {
         vehicleMap.get(vehicleID).setRented(false);
         save(repositoryPath);
     }
 
     @Override
-    public void returnVehicle(int vehicleID) {
-        vehicleMap.get(vehicleID).setRented(true);
-        save(repositoryPath);
+    public Vehicle getVehicle(int vehicleID) {
+       return vehicleMap.get(vehicleID);
     }
 
     @Override
@@ -42,7 +50,7 @@ public class VehicleRepository implements IVehicleRepository{
             FileWriter fileWriter = new FileWriter(f);
 
             for (var v : vehicleMap.values()){
-                fileWriter.write(v.toCSV() +"\n");
+                fileWriter.write(STR."\{v.toCSV()}\n");
             }
 
             fileWriter.close();
