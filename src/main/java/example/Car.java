@@ -1,6 +1,10 @@
-public class Car extends Vehicle{
-    public Car(String brand, String model, int year, int price, boolean rented){
-        super(brand, model, year, price, rented);
+package example;
+
+import example.Vehicle;
+
+public class Car extends Vehicle {
+    public Car(String brand, String model, int year, int price, boolean rented, Integer id){
+        super(brand, model, year, price, rented, id);
         super.vehicleType = "car";
     }
     public Car(String[] csvLine){

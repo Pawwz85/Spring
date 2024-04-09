@@ -1,3 +1,6 @@
+package example;
+
+import example.dao.IUserRepository;
 import org.apache.commons.codec.digest.DigestUtils;
 
 public class Authentication {
@@ -6,12 +9,13 @@ public class Authentication {
         return DigestUtils.sha3_256Hex(plainText);
     }
 
-    private final IUserRepository repo;
-    Authentication (IUserRepository repo){
-        this.repo = repo;
+    public static void setRepo(IUserRepository repo) {
+        Authentication.repo = repo;
     }
 
-    public User auth(String login, String plainTextPassword){
+    private static IUserRepository repo;
+
+    public static User auth(String login, String plainTextPassword){
         User account = repo.getUser(login);
 
         if(account == null)

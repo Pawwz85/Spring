@@ -1,9 +1,13 @@
-public class Motorcycle extends Vehicle{
+package example;
+
+import example.Vehicle;
+
+public class Motorcycle extends Vehicle {
 
     private String category;
 
-    Motorcycle(String brand, String model, int year, int price, boolean rented, String category){
-        super(brand, model, year, price, rented);
+    public Motorcycle(String brand, String model, int year, int price, boolean rented, int id, String category){
+        super(brand, model, year, price, rented, id);
         this.category = category;
         super.vehicleType = "motorcycle";
     }

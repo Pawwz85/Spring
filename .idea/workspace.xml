@@ -4,30 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4757dbf-f71e-4a01-950f-a30cd899962c" name="Changes" comment="Test Config">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Authentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserRole.java" afterDir="false" />
+    <list default="true" id="a4757dbf-f71e-4a01-950f-a30cd899962c" name="Changes" comment="Second comit to the project, added support for database.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/dao/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/dao/IVehicleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/dao/jdbc/DatabaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/dao/jdbc/JdbcUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/dao/jdbc/JdbcVehicleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VehicleRepository.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VehicleRepository.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSVVehicleDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSVVehicleDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenericVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GenericVehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IDManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IDManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IVehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IVehicleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Motorcycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VehicleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/Authentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSVVehicleDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GenericVehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IDManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/IDManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IVehicleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/Motorcycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VehicleRepository.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +38,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -46,22 +46,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Pawwz85"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="55d11a86-4196-4411-add4-53e5ee87c0de" />
-        <option name="url" value="https://github.com/Pawwz85/Spring.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -72,25 +58,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pawwz/IdeaProjects/VehicleRepository/src/main/java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pawwz\IdeaProjects\VehicleRepository\src\main\java" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-bfa3237e" />
-        <option value="jdk-22-openjdk-22-3183f394aec4-75f08976" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -103,19 +90,10 @@
       <option name="presentableId" value="Default" />
       <updated>1710348204161</updated>
     </task>
-    <task id="LOCAL-00001" summary="Test Config">
-      <option name="closed" value="true" />
-      <created>1710954446536</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1710954446536</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test Config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Config" />
+    <MESSAGE value="Second comit to the project, added support for database." />
+    <option name="LAST_COMMIT_MESSAGE" value="Second comit to the project, added support for database." />
   </component>
 </project>

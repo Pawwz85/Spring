@@ -1,3 +1,5 @@
+package example;
+
 public abstract class Vehicle {
 
     protected String vehicleType = "vehicle";
@@ -16,12 +18,12 @@ public abstract class Vehicle {
         this.rented = rented;
 
         if(id != null)
-            IDManager.registerID(id);
-        this.id = (id == null)?IDManager.assignNewID() : id;
+            IDManager.getInstance().registerID(id);
+        this.id = (id == null)? IDManager.getInstance().assignNewID() : id;
     }
 
-    public Vehicle(String brand, String model, int year, int price, boolean rented){
-       init(brand, model, year, price, rented, null);
+    public Vehicle(String brand, String model, int year, int price, boolean rented, Integer id){
+       init(brand, model, year, price, rented, id);
     }
 
     public Vehicle(String[] csvLine){

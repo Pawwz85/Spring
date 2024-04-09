@@ -1,3 +1,9 @@
+package example;
+
+import example.Car;
+import example.dao.jdbc.JdbcUserRepository;
+import example.dao.jdbc.JdbcVehicleRepository;
+
 import java.util.Random;
 
 public class Main {
@@ -9,14 +15,13 @@ public class Main {
 
         String brand = (String) randomChoice(brands);
         String model = "prototype";
-        return new Car(brand, model, (Integer) randomChoice(years), (Integer) randomChoice(prices), false);
+        return new Car(brand, model, (Integer) randomChoice(years), (Integer) randomChoice(prices), false, null);
     }
     public static Object randomChoice(Object[] array){
         return array[RNG.nextInt(0, array.length)];
     }
     public static void main(String[] args) {
-        VehicleRepository test = new VehicleRepository("repo.csv");
-        for(int i = 0; i<20; ++i)
-            test.addToRepository(generateRandomCar());
+        App app = new App(JdbcVehicleRepository.getInstance(), JdbcUserRepository.getInstance());
+        app.run();
     }
 }
