@@ -5,6 +5,8 @@ import org.example.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+
 import java.util.Collection;
 
 public class UserDAO implements IUserRepository {
@@ -14,8 +16,15 @@ public class UserDAO implements IUserRepository {
     public User getUser(String login) {
         Session session = sessionFactory.openSession();
         User user = null;
-        Transaction transaction = null;
-        //TODO: Finish this method
+
+        try{
+            user = session.get(User.class, login);
+        } catch (RuntimeException e) {
+          e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
         return user;
     }
 

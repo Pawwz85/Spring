@@ -16,8 +16,6 @@ public class App {
     public static  User user = null;
     private final Scanner scanner = new Scanner(System.in);
     private final IUserRepository iur = UserDAO.getInstance(HibernateUtil.getSessionFactory());
-
-    //TODO: Make VehicleDAO class a singleton.
     private final IVehicleRepository ivr = new VehicleDAO(HibernateUtil.getSessionFactory());
 
     public void run() {
