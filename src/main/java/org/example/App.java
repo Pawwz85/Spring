@@ -97,7 +97,13 @@ public class App {
                     String  removePlate = scanner.nextLine();
                     ivr.removeVehicle(removePlate);
                     break;
-                    //TODO: add logic for user add.
+                case "8":
+                    System.out.println("add user (only) separator is ; String login, String password (plain_text) ");
+                    line = scanner.nextLine();
+                    arr = line.split(";");
+                    String password = Authenticator.hashPassword(arr[1]);
+                    iur.addUser(new User(arr[0], password));
+
                 case "9":
                     System.out.println("remove user by login:");
                     String  removeLogin = scanner.nextLine();
