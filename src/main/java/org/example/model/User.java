@@ -13,7 +13,8 @@ public class User {
 
     //private String rentedPlate;
 
-    @OneToOne(mappedBy = "user", fetch = FetchType.EAGER)
+    @OneToOne
+    @JoinColumn(name = "rentedPlate", referencedColumnName = "plate")
     private Vehicle vehicle;
 
     public User(String login, String password, Role role, Vehicle vehicle) {

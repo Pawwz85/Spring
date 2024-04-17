@@ -4,15 +4,16 @@ import jakarta.persistence.*;
 import org.example.BooleanToShortConventer;
 
 @Entity
+@Table(name="tvehicle")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "vehicletype",
+@DiscriminatorColumn(name = "vehicle_type",
         discriminatorType = DiscriminatorType.STRING)
 public abstract class Vehicle {
     private String brand;
     private String model;
     private int year;
 
-    @Column(name = "price", columnDefinition = "DECIMAL(10,2)")
+    @Column(name = "price", columnDefinition = "NUMERIC")
     private double price;
 
     @Id
@@ -20,7 +21,7 @@ public abstract class Vehicle {
 
     @Convert(converter = BooleanToShortConventer.class)
     private boolean rent;
-    @OneToOne(mappedBy = "vehicle", fetch = FetchType.EAGER)
+    @OneToOne(mappedBy = "vehicle")
     private User user;
 
     public Vehicle(String brand, String model, int year, double price, String plate) {

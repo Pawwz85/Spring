@@ -12,7 +12,7 @@ public class HibernateUtil {
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             Configuration cfg =new Configuration();
-            cfg.configure("example/resources/hibernate.cfg.xml")
+            cfg.configure("hibernate.cfg.xml")
                     .addAnnotatedClass(Vehicle.class)
                     .addAnnotatedClass(Car.class)
                     .addAnnotatedClass(Motorcycle.class)
