@@ -9,8 +9,13 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class RentCarDto {
+public class VehicleDto {
+    private String brand;
+    private String model;
+    private int year;
+    private double price;
     private String plate;
-    private String login;
-    private String password;
+    private boolean rent;
+    private String category;
 }
+

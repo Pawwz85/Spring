@@ -1,5 +1,6 @@
 package org.example.service;
 
+import lombok.AllArgsConstructor;
 import org.example.authenticate.Authenticator;
 import org.example.dao.IUserRepository;
 import org.example.dto.CreateUserDto;
@@ -11,8 +12,10 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Collection;
 @Service
+@AllArgsConstructor
 public class UserService {
-    //todo: Dodac wstrzykwianie autowired przez konstruktor.
+
+    @Autowired
     private IUserRepository userRepository;
 
     public Collection<UserDto> getUsers() {
@@ -34,14 +37,16 @@ public class UserService {
             return null;
     }
 
-    public void createUser(CreateUserDto createUserDto) {
+
+    public Boolean createUser(CreateUserDto createUserDto) {
         User newUser = new User();
         newUser.setLogin(createUserDto.getLogin());
         newUser.setPassword(Authenticator.hashPassword(createUserDto.getPassword()));
         newUser.setRole(User.Role.USER);
-        userRepository.addUser(newUser);
-        //todo: logika gdy nie uda się dodać usera podobnie jak w deleteUser - zmiana void na typ String
-        // albo boolean.
+        boolean success = userRepository.getUser(newUser.getLogin()) == null;
+        if(success)
+            userRepository.addUser(newUser);
+        return success;
     }
     public String deleteUser(String login) {
         User user = userRepository.getUser(login);
@@ -54,6 +59,9 @@ public class UserService {
         return "deleted";
     }
 
+    public Boolean authUser(String login, String password){
+        return Authenticator.login(login, password) != null;
+    }
 }
 
 

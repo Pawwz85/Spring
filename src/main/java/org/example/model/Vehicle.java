@@ -1,8 +1,12 @@
 package org.example.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.example.BooleanToShortConventer;
 
+@Setter
+@Getter
 @Entity
 @Table(name = "tvehicle")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -49,62 +53,6 @@ public abstract class Vehicle {
                 ", plate='" + plate + '\'' +
                 ", rent=" + rent +
                 '}';
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getPlate() {
-        return plate;
-    }
-
-    public void setPlate(String plate) {
-        this.plate = plate;
-    }
-
-    public boolean isRent() {
-        return rent;
-    }
-
-    public void setRent(boolean rent) {
-        this.rent = rent;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public String toCSV() {

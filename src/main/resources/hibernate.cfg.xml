@@ -7,9 +7,9 @@
         <property name="connection.driver_class">org.postgresql.Driver</property>
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
-        <property name="connection.url">jdbc:postgresql://***</property>
-        <property name="connection.username">***</property>
-        <property name="connection.password">***</property>
+        <property name="connection.url">jdbc:postgresql://cornelius.db.elephantsql.com/</property>
+        <property name="connection.username">fgkaidtw</property>
+        <property name="connection.password">XcFSgEcmbtukhjs45V4_JFPEHz7uIygu</property>
 
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">validate</property>
@@ -18,8 +18,9 @@
 
         <mapping class="org.example.model.Vehicle"/>
         <mapping class="org.example.model.Car"/>
-        <mapping class="org.example.model.Motorcycle"/>
-        <mapping class="org.example.model.User"/>
+        <!--
+        TODO: add mapping classes User and Motorcycle
+        -->
 
     </session-factory>
 </hibernate-configuration>

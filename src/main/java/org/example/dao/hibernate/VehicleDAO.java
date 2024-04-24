@@ -18,6 +18,8 @@ public class VehicleDAO implements IVehicleRepository {
 
     SessionFactory sessionFactory;
 
+    private static VehicleDAO instance;
+
     @Autowired
     public VehicleDAO(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
@@ -154,5 +156,12 @@ public class VehicleDAO implements IVehicleRepository {
         } finally {
             session.close();
         }
+    }
+
+    public static VehicleDAO getInstance(SessionFactory sessionFactory){
+        if (instance == null)
+            instance = new VehicleDAO(sessionFactory);
+
+        return  instance;
     }
 }

@@ -12,6 +12,7 @@ import org.example.model.User;
 @AllArgsConstructor
 //todo: przy zwracaniu dodac informacje na temat wypozyczonego pojazdu
 public class UserDto {
+
     private String login;
     private User.Role role;
 }
